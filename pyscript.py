@@ -1,15 +1,9 @@
 import json
 from flask import Flask, request, render_template, request, jsonify, redirect, url_for,render_template_string
 import pyodbc
-# import mysql.connector
-from jinja2 import Template
 from waitress import serve
 import sys
-from PyQt5.QtWidgets import QApplication, QMainWindow, QVBoxLayout, QWidget
-from PyQt5.QtWebEngineWidgets import QWebEngineView
-from PyQt5.QtCore import  QUrl
-from threading import Thread
-from werkzeug.formparser import parse_form_data
+
 from datetime import date
 from fpdf import FPDF
 from pdf2image import convert_from_path
@@ -393,49 +387,6 @@ def login():
 def fg_home():
     return render_template('fg_home.html')
 
-##################################################################################################################################
-def index():
-    return 'Hello from Flask!'
-
-def start_flask_app():
-    app.run()
-
-class MainWindow(QMainWindow):
-    def __init__(self):
-        super().__init__()
-        self.setWindowTitle("Fourtitude Garage")
-        self.setGeometry(100, 100, 800, 600)
-
-        self.central_widget = QWidget()
-        self.setCentralWidget(self.central_widget)
-
-        layout = QVBoxLayout()
-        self.central_widget.setLayout(layout)
-
-        self.web_view = QWebEngineView()
-        layout.addWidget(self.web_view)
-
-        self.load_flask_app()
-
-    def load_flask_app(self):
-        url = QUrl("http://127.0.0.1:5000/")  # Create a QUrl object
-        self.web_view.setUrl(url)
-
-
-def main():
-    # Start Flask app in a separate thread
-    from threading import Thread
-    flask_thread = Thread(target=start_flask_app)
-    flask_thread.start()
-
-    # Create PyQt application
-    app = QApplication(sys.argv)
-    main_window = MainWindow()
-    main_window.show()
-    sys.exit(app.exec_())
-################################################################################################
-
-
 @app.route('/customer_info', methods=['POST'])
 def customer_info():
     name=request.form['name']
@@ -669,6 +620,6 @@ def transaction():
 # ---------------------------------------------------------------------------------------------------------------------------------
 
 if __name__ == '__main__':
-    # app.run(debug=True)
-    serve(app,host='0.0.0.0',port=50100,threads=2)
+    app.run(debug=True)
+    #serve(app,host='0.0.0.0',port=50100,threads=2)
     #main()
