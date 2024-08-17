@@ -1,3 +1,4 @@
+# Fourtitude Garage POS
 # Data Structures and Algorithms / Database - Final Project
 
 <p>A Point of Sale (POS) system for automobile shops that facilitate the
