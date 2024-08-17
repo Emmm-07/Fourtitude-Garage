@@ -6,7 +6,7 @@ store transactions.</p>
 
 ## Demo
 Watch the project in action: 
-[here](https://reccloud.com/u/onegqtq)*
+[here🚀](https://reccloud.com/u/onegqtq)
 
 ## Technologies Used:
 
