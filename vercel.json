@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {
     "version": 2,
     "builds": [
@@ -6,4 +7,14 @@
     "routes": [
         {"src": "/(.*)", "dest": "pyscript.py"}
     ]
+=======
+{
+    "version": 2,
+    "builds": [
+        {"src": "pyscript.py", "use": "@vercel/python"}
+    ],
+    "routes": [
+        {"src": "/(.*)", "dest": "pyscript.py"}
+    ]
+>>>>>>> cb3e0ac42173b61b48b259b248d4be34ab150f23
 }
