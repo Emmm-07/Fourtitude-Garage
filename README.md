@@ -4,7 +4,9 @@
 functions of buying a car, renting a car, and car servicing with a database system that will
 store transactions.</p>
 
-*View demo [here](https://reccloud.com/u/onegqtq)*
+## Demo
+Watch the project in action: 
+[here](https://reccloud.com/u/onegqtq)*
 
 ## Technologies Used:
 
