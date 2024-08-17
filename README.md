@@ -4,7 +4,7 @@
 functions of buying a car, renting a car, and car servicing with a database system that will
 store transactions.</p>
 
-View demo [here](https://reccloud.com/u/onegqtq)
+*View demo [here](https://reccloud.com/u/onegqtq)*
 
 ## Technologies Used:
 
@@ -17,8 +17,6 @@ View demo [here](https://reccloud.com/u/onegqtq)
 **Python**: For server-side scripting and managing the backend logic of the application.
 
 **Flask**: Python framework for web development
-
-**OpenCV**: Used in the the project feature: Admin Face Login
 
 **MS Access**: For database 
 
