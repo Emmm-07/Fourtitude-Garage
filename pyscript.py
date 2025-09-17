@@ -60,7 +60,7 @@ app = Flask(__name__)
 
 
 try:
-    con_str = r'DRIVER={Microsoft Access Driver (*.mdb, *.accdb)};DBQ=C:\Users\jmbal\PycharmProjects\templates\database_fourtitude.accdb;'
+    con_str = r'DRIVER={Microsoft Access Driver (*.mdb, *.accdb)};DBQ=C:\Users\jmbal\OneDrive\Documents\Coding Projects\Fourtitude-Garage\Fourtitude-Garage\database_fourtitude.accdb;'
     connection = pyodbc.connect(con_str)
     dBase_cursor = connection.cursor()
     print("CONNECTED")
@@ -218,7 +218,7 @@ def receipt(transactions_list,transaction_id):
     my_pdf.cell(200, 6, txt=divider, ln=21, align="C")
     receipt_num = transaction_id[3:]
     my_pdf.output(f"receipts/official_receipt{receipt_num}.pdf")
-    images = convert_from_path(f'receipts/official_receipt{receipt_num}.pdf',500,poppler_path=r'C:\Program Files\Release-24.02.0-0\poppler-24.02.0\Library\bin')
+    images = convert_from_path(f'receipts/official_receipt{receipt_num}.pdf',500,poppler_path=r'lib\poppler-24.02.0\Library\bin')
     img_name=f"receipt_image{receipt_num}.jpg"
     images[0].save(f"static/{img_name}","JPEG")
     return img_name
